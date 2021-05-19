@@ -1,1 +1,6 @@
 
+* linguist-vendored
+*.py linguist-vendored=true
+*.js linguist-vendored=true
+*.css linguist-vendored=true
+*.html linguist-vendored=true
