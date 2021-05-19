@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual Try-On</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/facial.png') }}" sizes="16x16"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/util.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/LogInCss.css') }}">
+       
+    </head>
+    <body>
+
+        <div class="top-logo">
+            <header>
+				<image src="{{ url_for('static', filename='images/facemesh.jpg') }}" style="width:250px; height:100px;"></image>
+                <div class="headers"><h1>Virtual Try-On</h1></div>
+                <div class="widgets">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+                </div>
+			</header>
+        </div>
+        <div class="top-container">
+            <h1>Find Your Best Glass Shape</h1>
+            <div class="topnav">
+
+                <div class="topnav-right">
+                    <a class="active" href="login.html">LogIn</a>
+                    <a href="signUp.html">Sign Up</a>
+                </div>
+            </div>  
+            
+            <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+				<form class="login100-form validate-form" action="login" method="POST">
+					<span class="login100-form-title p-b-34">
+						Login to Access Features
+					</span>
+					
+					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type email">
+						<input id="first-name" class="input100" type="text" name="email" placeholder="Email Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+                                    
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Log in
+						</button>
+					</div>
+
+					<div class="w-full text-center p-t-27 p-b-239">
+						<span class="txt1">
+							Forgot
+						</span>
+
+						<a href="#" class="txt2">
+							User name / password?
+						</a>
+					</div>
+
+					<div class="w-full text-center">
+						<a href="signUp.html" class="txt3">
+							Sign Up
+						</a>
+					</div>
+				</form>
+                            
+				<div class="login100-more" style="background-image: url({{ url_for ('static', filename = 'images/facial.png') }});"></div>
+
+			</div>
+		</div>
+	</div>
+            
+            <div class="outbox">
+            <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="HomePage.html">Home</a>		
+                                        <a href="AboutUs.html">About Us</a>
+					<a href="ContactUs.html">Contact</a>
+				</p>
+
+				<p class="footer-company-name">TryOnSystem 2021</p>
+
+			</div>
+
+			<div class="footer-right">
+
+				<form method="get" action="#">
+					<input placeholder="Search our website" name="search" />
+					<i class="fa fa-search"></i>
+                                         
+				</form>
+
+			</div>
+
+            </footer>
+            </div>
+        </div>
+        
+    </body>
+</html>

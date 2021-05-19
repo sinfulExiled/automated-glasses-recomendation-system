@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Virtual Try-On</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pics/banger.png" type="image/gif" sizes="16x16"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/HomePageCss.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+
+<div class="top-logo">
+    <header>
+        <image src="{{ url_for('static', filename='images/facemesh.jpg') }}" style="width:250px; height:100px;"></image>
+        <div class="headers"><h1>Virtual Try-On</h1></div>
+        <div class="widgets">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        </div>
+    </header>
+</div>
+<div class="top-container">
+    <h1>See Whats The Best Glasses For Your Face</h1>
+    <div class="topnav">
+
+        <a href="home">Home</a>
+        <a class="active" href="cnn_predict">Try On Using CNN</a>
+        <a href="kmeans_clustering">Try On Using K-Means</a>
+
+    </div>
+    <div class="main">
+
+        <div class='parent'>
+            <div style="float: left;">
+                <img src="{{ url_for('video_feed') }}">
+            </div>
+            <div style="float: left;">
+
+                <form action="/savef" method="POST"
+                      style="margin-left: 100px; margin-top: 100px; width: 100%;">
+
+					<span class="login100-form-title p-b-34">
+						Save Image
+					</span>
+
+
+                    <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Gender">
+                        <label class="container">jpg:
+                            <input type="radio" checked="checked" name="format" value="jpg">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">png:
+                            <input type="radio" name="format" value="png">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Capture
+                        </button>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <br>
+
+</div>
+
+
+    </div>
+    <div class="outbox">
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <p class="footer-links">
+                    <a href="HomePage.html">Home</a>
+                    <a href="AboutUs.html">About Us</a>
+                    <a href="ContactUs.html">Contact</a>
+                </p>
+
+                <p class="footer-company-name">Virtual Try-On 2021</p>
+
+            </div>
+
+            <div class="footer-right">
+
+                <form method="get" action="#">
+                    <input placeholder="Search our website" name="search"/>
+                    <i class="fa fa-search"></i>
+
+                </form>
+
+            </div>
+
+        </footer>
+    </div>
+</div>
+
+</body>
+</html>
