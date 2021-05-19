@@ -1,8 +1,11 @@
 # automated-glasses-recomendation-system
+# download face shape dataset
+
+https://www.kaggle.com/niten19/face-shape-dataset
 
 # Description For CNN algorithm 
 
-In this report, four distinct challenging scopes are addressed under the supervised machine learning paradigm. They comprise binary classification tasks for gender (A1) and smile detection (A2) along with multi-categorical classification tasks concerning eye-colour (B2) and face-shape (B1) recognition. Most notably, several methodologies are proposed to deal with these duties (see Models Section in [Instruction.md](https://github.com/EdoardoGruppi/AMLS_assignment20_21/blob/main/Instructions.md) to have more details).
+In this report, four distinct challenging scopes are addressed under the supervised machine learning paradigm. They comprise binary classification tasks for gender (A1) and smile detection (A2) along with multi-categorical classification tasks concerning eye-colour (B2) and face-shape (B1) recognition. Most notably, several methodologies are proposed to deal with these duties
 
 |                                       |                   Task A1                    |                                                Task A2                                                 |             Task B1              |                                       Task B2                                       |
 | ------------------------------------- | :------------------------------------------: | :----------------------------------------------------------------------------------------------------: | :------------------------------: | :---------------------------------------------------------------------------------: |
@@ -10,10 +13,10 @@ In this report, four distinct challenging scopes are addressed under the supervi
 | Dataset division                      |                   70:15:15                   |                                                70:15:15                                                |             60:20:20             |                                      60:20:20                                       |
 | Original examples                              |                 5.000 images                 |                                              5.000 images                                              |          10.000 images           |                                    10.000 images                                    |
 | Size of each image                    |                  178x218x3                   |                                               178x218x3                                                |            500x500x3             |                                      500x500x3                                      |
-| First operations                      |                     None                     | Smiles are extracted by means of face_recognition models from images previously converted in grayscale |               None               | Harmful images are removed with the pre-trained model_glasses specifically designed |
+| First operations                      |                     None                     | faces are extracted by means of face_recognition models from images previously converted in grayscale |               None               | Harmful images are removed with the pre-trained model_glasses specifically designed |
 | Examples                              |                  Unchanged                   |                                              4990 images                                               |            Unchanged             |                                     8146 images                                     |
 | New image size                        |                  Unchanged                   |                                                96x48x1                                                 |            Unchanged             |                                      Unchanged                                      |
-| Pre-processing                        |       Images are rescaled and reshaped       |         HOG features extracted from smile images are standardised before being reduced by PCA          | Images are rescaled and reshaped |                          Images are rescaled and reshaped                           |
+| Pre-processing                        |       Images are rescaled and reshaped       |         HOG features extracted from face images are standardised before being reduced by PCA          | Images are rescaled and reshaped |                          Images are rescaled and reshaped                           |
 | Data augmentation on training dataset | Images are randomly and horizontally flipped |                                                  None                                                  |               None               |                                        None                                         |
 | Input example shape                   |                   96x96x3                    |                                                 360x1                                                  |            224x224x3             |                                      224x224x3                                      |
 | Model                                 |                     CNN                      |                                                  SVM                                                   |               CNN2               |                                        CNN2                                         |
@@ -22,7 +25,6 @@ In this report, four distinct challenging scopes are addressed under the supervi
 
 ## How to start
 
-A comprehensive guide concerning how to run the code along with additional information is provided in the file [Instruction.md](https://github.com/EdoardoGruppi/AMLS_assignment20_21/blob/main/Instructions.md).
 
 The packages required for the execution of the code along with the role of each file and the software used are described in the Sections below.
 
@@ -69,13 +71,13 @@ Please note that the descriptions provided in this subsection are taken directly
 
 PyCharm is an integrated development environment (IDE) for Python programmers: it was chosen because it is one of the most advanced working environments and for its ease of use.
 
-> <img src="https://camo.githubusercontent.com/9e56fd69605928b657fcc0996cebf32d5bb73c46/68747470733a2f2f7777772e636f6d65742e6d6c2f696d616765732f6c6f676f5f636f6d65745f6c696768742e706e67" width="140" alt="comet">
+> <img src="https://cdn-images-1.medium.com/max/1024/1*-QTg-_71YF0SVshMEaKZ_g.png" width="140" alt="tesorflow">
 
-Comet is a cloud-based machine learning platform that allows data scientists to track, compare and analyse experiments and models.
+TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools.
 
-> <img src="https://cdn-images-1.medium.com/max/1200/1*Lad06lrjlU9UZgSTHUoyfA.png" width="140" alt="colab">
+> <https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" width="140" alt="flask">
 
-Google Colab is an environment that enables to run python notebook entirely in the cloud. It supports many popular machine learning libraries and it offers GPUs where you can execute the code as well.
+flask is a front end framework that is very well suited for handling pythons end points.
 
 ```
 --->
