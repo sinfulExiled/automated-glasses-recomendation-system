@@ -1,6 +1,2 @@
 * linguist-vendored
-*.js linguist-vendored=false
-* linguist-vendored
-*.css linguist-vendored=false
-* linguist-vendored
-*.java linguist-vendored=false
+*.python linguist-vendored=false
