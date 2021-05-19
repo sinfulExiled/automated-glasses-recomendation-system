@@ -75,7 +75,7 @@ PyCharm is an integrated development environment (IDE) for Python programmers: i
 
 TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools.
 
-> <https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" width="140" alt="flask">
+> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1200px-Flask_logo.svg.png" width="140" alt="flask">
 
 flask is a front end framework that is very well suited for handling pythons end points.
 
